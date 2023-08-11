@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Poppins";
+    font-weight: 500;
+    src: url(/shortly/fonts/Poppins-Medium.ttf);
+  }
+  @font-face {
+    font-family: "Poppins";
+    font-weight: 700;
+    src: url(/shortly/fonts/Poppins-Bold.ttf);
+  }
+}
