@@ -1,9 +1,9 @@
 import Boost from "./components/Home/Boost";
 import Features from "./components/Home/Features";
 import Footer from "@/components/Home/Footer";
-import Hero from "./components/Home/Hero";
-import Navbar from "./components/Home/Navbar";
-import ShortenIt from "./components/Home/ShortenIt";
+import Hero from "@/components/Home/Hero";
+import Navbar from "@/components/Home/Navbar";
+import ShortenIt from "@/components/Home/ShortenIt";
 
 function App() {
   return (
