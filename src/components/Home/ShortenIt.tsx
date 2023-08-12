@@ -7,8 +7,9 @@ import React, { useRef } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import UrlsRow from "./UrlsRow";
+import { useLocalStorage } from "@/hooks/useLocalStorage";
 // import { getByCodeUrl } from "@/utils/requests";
-import { useLocalStorageState } from "react-localstorage-hooks";
+// import { useLocalStorageState } from "react-localstorage-hooks";
 
 interface Props {}
 
@@ -34,9 +35,10 @@ export interface ILinksPair {
 }
 
 const ShortenIt: React.FC<Props> = () => {
-  const [links, setLinks] = useLocalStorageState<ILinksPair[]>("links", {
-    initialState: [],
-  });
+  const { value: links, setValue: setLinks } = useLocalStorage<ILinksPair[]>(
+    "links",
+    []
+  );
   const newUrlRef = useRef<HTMLInputElement>(null);
 
   const mutation = useMutation({
